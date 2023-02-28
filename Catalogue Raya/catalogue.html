@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Catalogue</title>
+
+</head>
+<body>
+ <!-- Boxiocns CDN Link -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+ <style>
+       .animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.animation h1 {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animation p {
+  animation: fadeIn 2s ease-in-out;
+}
+
+    body {
+      
+      background-image: url("backgroundc.jpg");
+  background-size: cover;
+         background-color: #E8D0EB;
+         }
+         .center-logo {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+         }
+ 
+    .profile-sampul-section 
+        {
+         text-align: center;
+         padding: 50px;
+         }
+ 
+         .profile-sampul {
+         width: 100px;
+         height: 100px;
+         border-radius: 50%;
+         }
+         .center 
+         {
+         text-align: center;
+         }
+ /* button toggle sampul or kad */
+       button {
+         background-color: #735fa1;
+         color: rgb(255, 255, 255);
+         border-radius: 0; /* added border-radius property */
+         padding: 10px 20px;
+       }
+       #sampulForm, #kadForm {
+      display: none;
+    }
+ /* catalogue form */
+       .form-container {
+     background-color: #9B7CED;
+     padding: 10px;
+     border-radius: 10px;
+   }
+ 
+   .form-group {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 10px;
+   }
+ 
+   label {
+     font-weight: bold;
+     margin-bottom: 5px;
+   }
+ 
+   input {
+     padding: 10px;
+     border-radius: 10px;
+     border: none;
+   }
+   .catalogue-toggle {
+    border: 0px solid white;
+    border-radius: 30px;
+   }
+   .submit-toggle-register {
+    border: #E04595;
+    border-radius: 30px;
+   }
+   .form-login-register{
+    border-radius: 30px;
+    color : #E04595 ;
+   }
+   .contact-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+   }
+   .sdr {
+  border-radius: 4px;
+  padding: 10px;
+  width: 200px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+#sampulForm {
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+/* Hide the scrollbar */
+#sampulForm::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+}
+#kadForm {
+    overflow-y: scroll;
+    max-height: 400px;
+}
+#kadForm::-webkit-scrollbar {
+    width: 0;
+    background-color: transparent;
+}
+.sdr {
+    width: 150px; /* default size */
+  }
+  .sdr-big {
+    width: 500px; /* bigger size */
+  }
+  .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer li {
+  margin: 0 10px;
+}
+
+.footer a {
+  color: #B41C6E;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+  flex: 1;
+}
+.social-icons {
+   
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+  }
+
+  .social-icons a {
+    margin-left: 20px;
+    color: #735fa1;
+  }
+
+
+
+    </style>
+
+ <!-- logo -->
+ <div class="animation">
+ <p class="center-logo"> <img src="logoptabah.png" alt="logo" width="100" height="100"> </p>
+
+<div class="center">
+ <p><h1 style="color: #4E397E; font-family: 'Times New Roman', Times, serif;">Products</h1>
+
+
+ <!-- choose catalogue -->
+<button class="catalogue-toggle" id="toggleButton" style="width: 100px; height: 100px;">
+    
+    <p>Sampul Duit Raya</p>
+  </button>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  <button class="catalogue-toggle" id="switchForm" style="width: 100px; height: 100px;">
+    
+    <p>Kad Raya</p>
+  </button>
+
+  <!-- sampul -->
+ 
+  <p><div id="sampulForm">
+
+    <p>  <img class="sdr" src="sdr0102.png"> </p>
+    <p>  <img class="sdr" src="sdr0304.png"> </p>
+    <p>  <img class="sdr" src="sdr0506.png"> </p>
+    <p>  <img class="sdr" src="sdr0708.png"> </p>
+    <p>  <img class="sdr" src="sdr09.png"> </p>
+    <p>  <img class="sdr" src="sdr10.png"> </p>
+    <p>  <img class="sdr" src="sdr11.png"> </p>
+        <p>  <img class="sdr" src="sdr12.png"> </p>
+        <p>  <img class="sdr" src="sdr13.png"> </p>
+        <p>  <img class="sdr" src="sdr14.png"> </p>
+        <p>  <img class="sdr" src="sdr15.png"> </p>
+        <p>  <img class="sdr" src="sdr16.png"> </p>
+        <p>  <img class="sdr" src="sdr17.png"> </p>
+        <p>  <img class="sdr" src="sdr18.png"> </p>
+        <p>  <img class="sdr" src="sdr19.png"> </p>
+        <p>  <img class="sdr" src="sdr20.png"> </p>
+        <p>  <img class="sdr" src="sdr21.png"> </p>
+        <p>  <img class="sdr" src="sdr22.png"> </p>
+   
+</div></p>
+
+<!-- kad -->
+<p><div id="kadForm">
+
+  <p>  <img class="sdr" src="kr01.png"> </p>
+  <p>  <img class="sdr" src="kr02.png"> </p>
+  <p>  <img class="sdr" src="kr03.png"> </p>
+  <p>  <img class="sdr" src="kr04.png"> </p>
+  <p>  <img class="sdr" src="kr05.png"> </p>
+  <p>  <img class="sdr" src="kr06.png"> </p>
+  <p>  <img class="sdr" src="kr07.png"> </p>
+  <p>  <img class="sdr" src="kr08.png"> </p>
+  <p>  <img class="sdr" src="kr09.png"> </p>
+  <p>  <img class="sdr" src="kr10.png"> </p>
+  <p>  <img class="sdr" src="kr11.png"> </p>
+  <p>  <img class="sdr" src="kr12.png"> </p>
+
+</div></p>
+
+
+</div>
+
+<div class="footer">
+  <ul>
+    <li style="display: inline-block;"><a href="mailto:design.ptabah@gmail.com">design.ptabah@gmail.com</a></li> 
+    &nbsp;  &nbsp;  &nbsp;
+    <li style="display: inline-block;"><a href="tel:+60356325725">+603 5632 5725</a></li>
+  </ul>  
+</div>
+<div class="social-icons">
+  <a href="https://www.facebook.com/PercetakanTabahSdnBhd"><i class="fa fa-facebook"></i></a>   &nbsp;  &nbsp;  &nbsp;
+  <a href="https://www.instagram.com/percetakan_tabah"><i class="fa fa-instagram"></i></a>
+</div>
+<p class="copyright-font">15, Jalan Nilam 1/8, Taman Teknologi Tinggi Subang, 40000 Shah Alam, Selangor</p>
+
+ </div>
+ 
+
+<script>
+  const toggleButton = document.getElementById("toggleButton");
+  const sampulForm = document.getElementById("sampulForm");
+  const kadForm = document.getElementById("kadForm");
+  const switchForm = document.getElementById("switchForm");
+  
+  toggleButton.addEventListener("click", function() {
+    toggleButton.style.backgroundColor = "#E04595";
+    switchForm.style.backgroundColor = "";
+    sampulForm.style.display = "block";
+    kadForm.style.display = "none";
+  });
+  
+  switchForm.addEventListener("click", function() {
+    switchForm.style.backgroundColor = "#E04595";
+    toggleButton.style.backgroundColor = "";
+    kadForm.style.display = "block";
+    sampulForm.style.display = "none";
+  });
+ // add event listener to all images with class "sdr"
+ const images = document.querySelectorAll('.sdr');
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      img.classList.toggle('sdr-big'); // toggle class "sdr-big"
+    });
+  });
+
+
+
+  </script>
+  
+  </body>
+  </html>

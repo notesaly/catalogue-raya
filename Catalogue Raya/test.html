@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <title>Catalogue</title>
+<head>
+<style>
+body {
+    background-image: url("backgroundc.jpg");
+  background-size: cover;
+         }
+         .toggle-container {
+            margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-link {
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+.toggle-link.active {
+  background-color: gray;
+  color: white;
+}
+
+.toggle-content {
+  margin-top: 100px;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.slider:focus .slide:nth-child(2) {
+  width: 250px;
+  height: 250px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+    <div class="toggle-container">
+        <a href="#" class="toggle-link active" data-toggle="1">Link 1</a>
+        <a href="#" class="toggle-link" data-toggle="2">Link 2</a>
+      </div>
+      
+      <div class="toggle-content" id="toggle-content-1">
+        <div class="slider">
+          <div class="slide">
+            <img src="image1.jpg" alt="Image 1">
+          </div>
+          <div class="slide">
+            <img src="image2.jpg" alt="Image 2">
+          </div>
+          <div class="slide">
+            <img src="image3.jpg" alt="Image 3">
+          </div>
+        </div>
+      </div>
+      
+      <div class="toggle-content hidden" id="toggle-content-2">
+        <div class="slider">
+          <div class="slide">
+            <img src="image4.jpg" alt="Image 4">
+          </div>
+          <div class="slide">
+            <img src="image5.jpg" alt="Image 5">
+          </div>
+          <div class="slide">
+            <img src="image6.jpg" alt="Image 6">
+          </div>
+        </div>
+      </div>
+      
+
+<script>
+   
+   const toggleLinks = document.querySelectorAll('.toggle-link');
+const toggleContents = document.querySelectorAll('.toggle-content');
+
+toggleLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    
+    toggleLinks.forEach((link) => {
+      link.classList.remove('active');
+    });
+    
+    toggleContents.forEach((content) => {
+      content.classList.add('hidden');
+    });
+    
+    const toggleId = link.getAttribute('data-toggle');
+    const toggleContent = document.querySelector(`#toggle-content-${toggleId}`);
+    
+    link.classList.add('active');
+    toggleContent.classList.remove('hidden');
+  });
+});
+
+const slider = document.querySelector('.slider');
+
+slider.addEventListener('scroll', () => {
+  const centerSlide = getCenterSlide(slider);
+  
+  slider.querySelectorAll('.slide').forEach((slide) => {
+    if (slide === centerSlide) {
+      slide.classList.add('center');
+    } else {
+      slide.classList.remove('center');
+    }
+  });
+});
+
+
+</script>
+
+</body>
+</html>
+
+

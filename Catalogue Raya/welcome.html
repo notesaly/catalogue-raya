@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Percetakan Tabah</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<style>
+    .animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.animation h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animation p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animation button {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: #E04595;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  animation: slideIn 2s ease-in-out;
+}
+.font {
+  color: #E04595;
+}
+.fontp {
+  color: #442562;
+}
+
+body {
+  animation: fadeIn 2s ease-in-out;
+  background-image: url("backgroundc.jpg");
+  background-size: cover;
+         background-color: #E8D0EB;
+         }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+</style>
+
+
+  <body>
+    <div class="animation">
+      <h1 class="font">Percetakan Tabah</h1>
+      <p class="fontp">Find the perfect <b>Kad & Sampul Hari Raya</b> in our catalogue.</p>
+      <a href="catalogue.html">  <button>Explore</button></a>
+    </div>
+  </body>
+</html>
